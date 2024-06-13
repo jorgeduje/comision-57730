@@ -47,3 +47,7 @@ console.log(total);
 // boolean ---> booleanos
 
 let elUsuarioEstaLogeado = true;
+
+console.log(color);
+
+let color = "rojo";
