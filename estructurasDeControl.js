@@ -16,7 +16,7 @@ let id = "dsadasd";
 
 // console.log(id === "xd123jk");
 
-let esCasado = true;
+let esCasado = false;
 
 // console.log(esCasado !== false);
 
