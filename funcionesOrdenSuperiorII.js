@@ -178,3 +178,90 @@ let segundosRestantes = (fechaFutura - fecha) / 1000;
 console.log(horasRestantes);
 console.log(minutosRestantes);
 console.log(segundosRestantes);
+
+console.log(typeof { id: 1, x: "ads" } === "object"); // string --> "string" || "object" || "number"
+
+// ordenar --> sort
+// reducir un array a su minima expresion ---> reduce
+let arrayCuentas = [
+  {
+    id: "2",
+    cbu: 5486273622,
+    tipoDeCuenta: "Cuenta Corriente",
+    saldoEnPesos: 5100,
+    titularCuenta: "pepito",
+    estadoDeCuenta: "al dia",
+  },
+  {
+    id: "1",
+    cbu: 1183971869,
+    tipoDeCuenta: "Caja de Ahorro",
+    saldoEnPesos: 300,
+    titularCuenta: "maria",
+    estadoDeCuenta: "con deuda",
+  },
+  {
+    id: "2",
+    cbu: 9582019689,
+    tipoDeCuenta: "Caja de Ahorro",
+    saldoEnPesos: 2200,
+    titularCuenta: "juancito",
+    estadoDeCuenta: "al dia",
+  },
+  {
+    id: "5",
+    cbu: 1761924656,
+    tipoDeCuenta: "Cuenta Corriente",
+    saldoEnPesos: 500,
+    titularCuenta: "carmen",
+    estadoDeCuenta: "al dia",
+  },
+  {
+    id: "4",
+    cbu: 7401971607,
+    tipoDeCuenta: "Cuenta Unica",
+    saldoEnPesos: 1200,
+    titularCuenta: "Jack",
+    estadoDeCuenta: "con deuda",
+  },
+];
+
+let nums = [1, 6, 12, 2, 3, 5];
+
+nums.sort((a, b) => b - a); // 5, 4, 3, 2, 1
+
+console.log(nums);
+let palabras = ["casa", "avion", "abeja", "mariposa"];
+
+let x = palabras.sort((a, b) => b.localeCompare(a));
+console.log(x);
+
+arrayCuentas.sort((a, b) => b.id - a.id); // {} - {}
+console.log(arrayCuentas);
+
+const sumarArray = () => {
+  let acc = 0;
+  for (let i = 0; i < nums.length; i++) {
+    acc += nums[i];
+  }
+  return acc;
+};
+
+// reduce
+let numeritos = [1, 6, 12, 2, 3, 5];
+
+let total = numeritos.reduce((acc, elemento) => acc + elemento, 0);
+
+console.log(total);
+
+let totalCuentas = arrayCuentas.reduce((acc, elemento) => {
+  return acc + elemento.saldoEnPesos;
+}, 0);
+console.log(totalCuentas);
+
+// 0 + 2 + 51 + 123 123+
+let totalNombres = arrayCuentas.reduce((acc, elemento) => {
+  return acc + elemento.titularCuenta + " ";
+}, "");
+
+console.log(totalNombres);

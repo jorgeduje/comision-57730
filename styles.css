@@ -7,3 +7,15 @@
 .title {
   color: peru;
 }
+
+.card {
+  border: 2px solid steelblue;
+  border-radius: 20px;
+  width: 200px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+.card h2 {
+  color: blue;
+}
