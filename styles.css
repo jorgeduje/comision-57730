@@ -19,3 +19,14 @@
 .card h2 {
   color: blue;
 }
+
+.container-productos {
+  width: 80%;
+  min-height: 700px;
+  border: 2px solid steelblue;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
